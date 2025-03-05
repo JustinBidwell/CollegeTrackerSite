@@ -1,0 +1,82 @@
+div {
+    width: 50%;
+    max-height: 500px;
+    display: block;
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* Merge table borders */
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+
+    overflow-y: scroll;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Table Header Styling */
+th {
+    background-color: #4caf50; /* Green background */
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Table Data (Body) Styling */
+td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Light grey border */
+    text-align: left;
+}
+
+/* Hover effect on table rows */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row color */
+}
+
+tr:hover {
+    background-color: #ddd; /* Hover effect to highlight row */
+}
+
+/* Add responsive behavior */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        border: none;
+    }
+
+    th,
+    td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+    }
+
+    td {
+        border-top: 1px solid #ddd;
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}
