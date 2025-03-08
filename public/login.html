@@ -7,19 +7,38 @@
         <link href="styles/style.css" rel="stylesheet" />
     </head>
     <body>
-        <div>
-            <h1>LOGIN</h1>
-            <div>
-                <div>Username:</div>
-                <input type="" name="" value="" />
+        <div id="container">
+            <div id="left-container">
+                <img src="images/cover2.svg" alt="" />
             </div>
-            <div>
-                <div>Password:</div>
-                <input type="" name="" value="" />
-            </div>
-            <div>
-                <button type="button">Login</button>
+            <div id="right-container">
+                <div id="right-container-items">
+                    <div id="title-container">
+                        <p>Welcome To College Tracker</p>
+                    </div>
+                    <div class="input-container">
+                        <p>Username</p>
+                        <input
+                            id="username"
+                            type="text"
+                            name=""
+                            value=""
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <p>Password</p>
+                        <input id="password" type="password" name="" value="" />
+                    </div>
+                    <div id="forgot-container">
+                        <a href="">Forgot Password?</a>
+                    </div>
+                    <div id="sign-in-container">
+                        <button id="sign-btn" type="button">Sign In</button>
+                    </div>
+                </div>
             </div>
         </div>
+        <script src="scripts/login.js"></script>
     </body>
 </html>
