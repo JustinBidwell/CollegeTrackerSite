@@ -30,6 +30,14 @@
     justify-content: center;
 }
 
+#incorrect-username {
+    display: none;
+    color: #8d3436;
+    background-color: #fedce0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 #right-container-items {
     color: #192f51;
     display: flex;

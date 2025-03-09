@@ -12,7 +12,13 @@ document.getElementById('sign-btn').addEventListener('click', async () => {
             body: JSON.stringify({ username: username, password: password }),
         });
         const data = await response.json();
-        console.log(data);
+        const element = document.getElementById('incorrect-username');
+        if (data.length > 0) {
+            element.style.display = 'none';
+            window.location.href = '/';
+        } else {
+            element.style.display = 'block';
+        }
     } catch (error) {
         console.log(error);
     }
