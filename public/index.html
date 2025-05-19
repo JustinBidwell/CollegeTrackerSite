@@ -9,24 +9,81 @@
             type="image/png"
             href="/images/icons8-college-16.png"
         />
-        <link rel="stylesheet" href="../styles/style.css" />
+        <link rel="stylesheet" href="../styles/login.css" />
         <title>College Tracker</title>
     </head>
     <body>
-        <button id="btn" type="button">Push Me</button>
-        <button id="btn-2" type="button">me</button>
-        <a href="login.html"><button type="button">Login</button></a>
+        <div id="landing-page-container">
+            <button type="button" id="login-btn">Login</button>
+            <div
+                style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 95vh;
+                "
+            >
+                <div
+                    style="
+                        display: flex;
+                        overflow-y: scroll;
+                        height: 500px;
+                        width: fit-content;
+                        border-radius: 5px;
+                        box-shadow: 9px 10px 10px -9px rgba(0, 0, 0, 0.75);
+                    "
+                >
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Credits</th>
+                                <th>Semester</th>
+                                <th>Year</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="college-table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-        <div id="class-table-container">
-            <table>
-                <thead>
-                    <th>COLLEGE COURSES</th>
-                    <th>SEMESTER</th>
-                    <th>CREDITS</th>
-                </thead>
-                <tbody id="tbody"></tbody>
-            </table>
+        <div id="login-container">
+            <div id="left-container">
+                <img src="images/cover2.svg" alt="" />
+            </div>
+            <div id="right-container">
+                <div id="right-container-items">
+                    <div id="title-container">
+                        <p>Welcome To College Tracker</p>
+                    </div>
+                    <div class="input-container">
+                        <div id="incorrect-username">
+                            Incorrect username or password
+                        </div>
+                        <p>Username</p>
+                        <input
+                            id="username"
+                            type="text"
+                            name=""
+                            value=""
+                            autocomplete="off"
+                        />
+                    </div>
+                    <div class="input-container">
+                        <p>Password</p>
+                        <input id="password" type="password" name="" value="" />
+                    </div>
+                    <div id="forgot-container">
+                        <a href="">Forgot Password?</a>
+                    </div>
+                    <div id="sign-in-container">
+                        <button id="sign-btn" type="button">Sign In</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
-    <script src="../scripts/main.js" type="module"></script>
+    <script src="scripts/login.js" type="module"></script>
 </html>
