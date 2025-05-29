@@ -39,8 +39,3 @@ document.getElementById('sign-btn').addEventListener('click', async () => {
         console.log(error);
     }
 });
-
-document.getElementById('login-btn').addEventListener('click', () => {
-    document.getElementById('landing-page-container').style.display = 'none';
-    document.getElementById('login-container').style.display = 'flex';
-});
