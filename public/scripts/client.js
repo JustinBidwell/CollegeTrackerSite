@@ -8,7 +8,6 @@ const show = (id) =>
 function router() {
     const route = location.pathname.slice(1) || 'home'; // "/login" → "login"
     if (!document.getElementById(route)) return show('home');
-    console.log(route);
     show(route);
 }
 

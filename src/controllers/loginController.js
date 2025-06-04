@@ -10,6 +10,7 @@ const getUsername = async (req, res) => {
             text = 'SELECT * FROM CLASSES WHERE username = $1';
             values = [user.rows[0].username];
             const classes = await client.query(text, values);
+            console.log('works');
             res.status(200).send(classes.rows);
         } else {
             res.status(200).send([]);

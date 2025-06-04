@@ -16,8 +16,8 @@
         <section id="home" data-page>
             <nav>
                 <a href="/" data-link>Home</a>
-                <a href="/login" id="login-btn" data-link>Login</a>
-                <a href="/create-account" id="create-account-btn" data-link
+                <a href="/login" id="login-nav" data-link>Login</a>
+                <a href="/create-account" id="create-account-nav" data-link
                     >Create Account</a
                 >
                 <a href="/main" data-link>Main</a>
@@ -26,7 +26,7 @@
 
         <section id="login" class="hidden" data-page>
             <div id="left-container">
-                <img src="images/cover2.svg" alt="" />
+                <img src="/images/cover2.svg" alt="" />
             </div>
             <div id="right-container">
                 <div id="right-container-items">
@@ -86,16 +86,22 @@
                         <p>Password</p>
                         <input id="password" type="password" name="" value="" />
                     </div>
-                    <div class="input-container">
-                        <p>Select A Major</p>
-                        <select>
-                            <option value="Gottem">Computer Engineer</option>
-                            <option value="Gottem">Computer Engineer</option>
+                    <div
+                        class="dropdown-container"
+                        style="
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                        "
+                    >
+                        <p>Major</p>
+                        <select id="major-select" style="cursor: pointer">
+                            <option value="" hidden>Select Major</option>
                         </select>
                     </div>
 
                     <div id="sign-in-container">
-                        <button id="sign-btn" type="button">
+                        <button id="create-account-btn" type="button">
                             Create Account
                         </button>
                     </div>
@@ -138,7 +144,7 @@
             </div>
         </section>
     </body>
-    <script src="scripts/client.js"></script>
-    <script src="scripts/createAccount.js" type="module"></script>
-    <script src="scripts/login.js" type="module"></script>
+    <script src="/scripts/client.js"></script>
+    <script src="/scripts/createAccount.js" type="module"></script>
+    <script src="/scripts/login.js" type="module"></script>
 </html>
