@@ -1,6 +1,7 @@
 const express = require('express');
 const classesroutes = require('./src/routes/classesRoutes.js');
 const loginroutes = require('./src/routes/loginRoutes.js');
+const createAccountRoutes = require('./src/routes/createAccountRoutes.js');
 const path = require('path');
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(express.json());
 
 app.use('/', classesroutes);
 app.use('/', loginroutes);
+app.use('/', createAccountRoutes);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));

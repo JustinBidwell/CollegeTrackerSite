@@ -11,6 +11,11 @@ function router() {
     show(route);
 }
 
+export function navigate(path) {
+    history.pushState(null, '', path);
+    router();
+}
+
 /* ---------- navigation handling ---- */
 document.addEventListener('click', (e) => {
     const link = e.target.closest('[data-link]');
